@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>暗区突围 - 像素个人主页</title>
+    <style>
+        /* 全局像素风重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            image-rendering: pixelated; /* 关键：保持像素锐利 */
+            font-family: 'Courier New', monospace;
+        }
+
+        body {
+            background: #1a1a1a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        /* 顶部导航 */
+        header {
+            background: #2d2d2d;
+            border-bottom: 4px solid #4CAF50;
+            padding: 1rem 0;
+            box-shadow: 0 4px 0 #000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            height: 64px;
+            width: auto;
+        }
+
+        .logo h1 {
+            font-size: 2rem;
+            color: #4CAF50;
+            text-shadow: 2px 2px #000;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+        }
+
+        nav a:hover {
+            background: #4CAF50;
+            border: 2px solid #4CAF50;
+            color: #000;
+        }
+
+        /* 英雄区 */
+        .hero {
+            background: #2d2d2d;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 4px solid #4CAF50;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #4CAF50;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #ccc;
+        }
+
+        /* 内容区 */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: #2d2d2d;
+            border: 3px solid #444;
+            padding: 1.5rem;
+            box-shadow: 4px 4px 0 #000;
+        }
+
+        .card h3 {
+            color: #4CAF50;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #444;
+            padding-bottom: 0.5rem;
+        }
+
+        /* 页脚 */
+        footer {
+            background: #2d2d2d;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            border-top: 4px solid #4CAF50;
+            color: #666;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                < img src="logo.png" alt="暗区突围Logo">
+                <h1>暗区突围 - 像素个人主页</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href=" ">首页</a ></li>
+                    <li><a href="#">物资库</a ></li>
+                    <li><a href="#">撤离指南</a ></li>
+                    <li><a href="#">关于我</a ></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 英雄区 -->
+    <section class="hero">
+        <h2>欢迎进入暗区</h2>
+        <p>这里是我的像素风个人主页，分享暗区突围的日常、攻略与快乐。在这个充满未知的暗区里，一起寻找物资，成功撤离！</p >
+    </section>
+
+    <!-- 内容主体 -->
+    <div class="container">
+        <div class="grid">
+            <!-- 个人简介 -->
+            <div class="card">
+                <h3>个人简介</h3>
+                <p>一名热爱《暗区突围》的玩家，喜欢像素风格，也喜欢分享游戏中的趣事。擅长搜刮物资、制定撤离计划，是暗区里的“生存专家”。</p >
+            </div>
+
+            <!-- 常用装备 -->
+            <div class="card">
+                <h3>常用装备</h3>
+                <ul>
+                    <li>主武器：M4A1（改装版）</li>
+                    <li>副武器：G17</li>
+                    <li>护甲：6B43重型防弹衣</li>
+                    <li>头盔：K6-3头盔</li>
+                </ul>
+            </div>
+
+            <!-- 撤离心得 -->
+            <div class="card">
+                <h3>撤离心得</h3>
+                <p>在暗区中，活着离开才是唯一的真理。记住三点：保持冷静、优先保命、学会看地图。哪怕只有一把手枪，也能成功撤离！</p >
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>© 2026 暗区突围像素个人主页 | 像素风致敬《暗区突围》</p >
+    </footer>
+</body>
+</html>
